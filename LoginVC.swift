@@ -12,6 +12,8 @@ class LoginVC: UIViewController {
     
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var failed: UILabel!
+    
     
     @IBAction func performLogin(sender: AnyObject) {
         if let useremail = email.text{
@@ -20,7 +22,7 @@ class LoginVC: UIViewController {
                 ref.authUser(useremail, password: userpassword,
                     withCompletionBlock: { error, authData in
                         if error != nil {
-                            // There was an error logging in to this account
+                            self.failed.text = "Login Failed. Please try again."
                         } else {
                             self.performSegueWithIdentifier("loggedin", sender: nil)
                         }
