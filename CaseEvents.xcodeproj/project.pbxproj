@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35868ED81CD428D800B62F53 /* NewUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35868ED71CD428D800B62F53 /* NewUserVC.swift */; };
+		35868EDA1CD4345500B62F53 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35868ED91CD4345500B62F53 /* LoginVC.swift */; };
 		7ADD39491CD3C1DB00700C40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADD39481CD3C1DB00700C40 /* AppDelegate.swift */; };
 		7ADD394B1CD3C1DB00700C40 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADD394A1CD3C1DB00700C40 /* FirstViewController.swift */; };
 		7ADD394D1CD3C1DB00700C40 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADD394C1CD3C1DB00700C40 /* SecondViewController.swift */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		35868ED71CD428D800B62F53 /* NewUserVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewUserVC.swift; path = ../NewUserVC.swift; sourceTree = "<group>"; };
+		35868ED91CD4345500B62F53 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginVC.swift; path = ../LoginVC.swift; sourceTree = "<group>"; };
 		7A49610F1CD3C9C700581570 /* CaseEvents-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CaseEvents-Bridging-Header.h"; sourceTree = "<group>"; };
 		7ADD39451CD3C1DB00700C40 /* CaseEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaseEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ADD39481CD3C1DB00700C40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				7ADD39481CD3C1DB00700C40 /* AppDelegate.swift */,
+				35868ED71CD428D800B62F53 /* NewUserVC.swift */,
+				35868ED91CD4345500B62F53 /* LoginVC.swift */,
 				7ADD394A1CD3C1DB00700C40 /* FirstViewController.swift */,
 				7ADD394C1CD3C1DB00700C40 /* SecondViewController.swift */,
 				7ADD394E1CD3C1DB00700C40 /* Main.storyboard */,
@@ -339,9 +345,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35868ED81CD428D800B62F53 /* NewUserVC.swift in Sources */,
 				7ADD394D1CD3C1DB00700C40 /* SecondViewController.swift in Sources */,
 				7ADD39491CD3C1DB00700C40 /* AppDelegate.swift in Sources */,
 				7ADD394B1CD3C1DB00700C40 /* FirstViewController.swift in Sources */,
+				35868EDA1CD4345500B62F53 /* LoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
