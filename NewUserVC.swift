@@ -12,6 +12,7 @@ class NewUserVC: UIViewController {
     
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var alert: UILabel!
     
     @IBAction func saveUser(sender: AnyObject) {
         if let newemail = email.text{
@@ -20,7 +21,7 @@ class NewUserVC: UIViewController {
                 ref.createUser(newemail, password: newpassword,
                     withValueCompletionBlock: { error, result in
                         if error != nil {
-                            print("User account exists")
+                            self.alert.text = "User name already exists!"
                         } else {
                             let uid = result["uid"] as? String
                             print("Successfully created user account with uid: \(uid)")
@@ -30,8 +31,11 @@ class NewUserVC: UIViewController {
             }
         }
         else {
-            print("Missing info")
+            self.alert.text = "Both fields are required!"
         }
     }
 
+    @IBAction func cancel(sender: AnyObject) {
+        self.performSegueWithIdentifier("accountcreated", sender: nil)
+    }
 }
