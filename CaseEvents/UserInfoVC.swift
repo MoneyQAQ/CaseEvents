@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class UserInfoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var eventCount:UInt = 0
     var eref = Firebase(url: "https://flickering-heat-8881.firebaseio.com/Events")

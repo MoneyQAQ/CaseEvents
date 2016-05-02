@@ -22,7 +22,7 @@ class EventTableViewController: UITableViewController {
         cell.location.text = event["location"] as? String
         return cell
     }
-    
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         ref.observeEventType(.Value, withBlock: { snapshot in
