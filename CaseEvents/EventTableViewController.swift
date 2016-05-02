@@ -10,14 +10,12 @@ import UIKit
 
 class EventTableViewController: UITableViewController {
     
-    
-    
     var eventCount:UInt = 0
     var ref = Firebase(url: "https://flickering-heat-8881.firebaseio.com/Events")
-    var events = [NSDictionary]()
+    static var events = [NSDictionary]()
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let event = events[indexPath.row]
+        let event = EventTableViewController.events[indexPath.row]
         let dequeued: AnyObject = tableView.dequeueReusableCellWithIdentifier("eventcell", forIndexPath: indexPath)
         let cell = dequeued as! EventCell
         if let ename = event["name"] as? String {
@@ -51,9 +49,11 @@ class EventTableViewController: UITableViewController {
         if let c = event["cost"] as? String {
             cell.cost.text = "Public " + c
         }
+        cell.row = indexPath.row
         return cell
     }
- 
+    
+     
     override func viewDidLoad() {
         super.viewDidLoad()
         ref.observeEventType(.Value, withBlock: { snapshot in
@@ -67,7 +67,7 @@ class EventTableViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return events.count
+        return EventTableViewController.events.count
     }
 
 
@@ -79,7 +79,7 @@ class EventTableViewController: UITableViewController {
                 let name = child.value as! NSDictionary
                 tempItems.append(name)
             }
-            self.events = tempItems
+            EventTableViewController.events = tempItems
             self.tableView.reloadData()
         })
     }

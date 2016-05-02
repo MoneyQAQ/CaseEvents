@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="edM-PU-cQS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="edM-PU-cQS">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -132,6 +132,9 @@
                                                             <exclude reference="fHG-HV-XX0"/>
                                                         </mask>
                                                     </variation>
+                                                    <connections>
+                                                        <action selector="add2Calendar:" destination="agW-z7-EV0" eventType="touchUpInside" id="4x6-4u-59Y"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGQ-Ee-4sz">
                                                     <rect key="frame" x="284" y="0.0" width="284" height="33"/>
@@ -144,6 +147,9 @@
                                                             <exclude reference="CBg-Wj-9Ii"/>
                                                         </mask>
                                                     </variation>
+                                                    <connections>
+                                                        <action selector="addToFav:" destination="agW-z7-EV0" eventType="touchUpInside" id="bLp-rc-sj2"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -1339,7 +1345,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MXq-EK-mFr" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="My info" image="second" id="cPa-gy-q4n"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fMS-Xf-RbE">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="fMS-Xf-RbE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.23614412470000001" green="0.433550306" blue="0.7904327552" alpha="1" colorSpace="calibratedRGB"/>
