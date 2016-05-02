@@ -17,7 +17,7 @@ class UserInfoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     let ref = Firebase(url: "https://flickering-heat-8881.firebaseio.com/Users")
     
     var userData = UserModel.currentUser.providerData
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let email = userData["email"] as? String
@@ -30,27 +30,24 @@ class UserInfoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             downloadImage(checkedUrl)
         }
         
-        let newUserInfo = ["email": email!, "age": "19"]
-        let newRef = ref.childByAutoId()
-        newRef.setValue(newUserInfo)
+        /*
         ref.observeEventType(.Value, withBlock: { snapshot in
             for item in snapshot.children {
                 let child = item as! FDataSnapshot
-                if child.value.valueForKey("email") as? String == email {
-                    self.test2.text = child.value.valueForKey("age") as? String
+                if child.value.valueForKey("uid") as? String == uid {
+                    self.test2.text = child.value.valueForKey("username") as? String
                 }
             }
-        })
+        })*/
         
-        self.favs.registerClass(EventCell.self, forCellReuseIdentifier: "myeventcell")
+        favs.delegate = self
+        favs.dataSource = self
         eref.observeEventType(.Value, withBlock: { snapshot in
             self.eventCount = snapshot.childrenCount
         })
         loadDataFromFirebase()
-        
-        print(userData)
     }
-
+    
     func getDataFromUrl(url:NSURL, completion: ((data: NSData?, response: NSURLResponse?, error: NSError? ) -> Void)) {
         NSURLSession.sharedSession().dataTaskWithURL(url) { (data, response, error) in
             completion(data: data, response: response, error: error)
@@ -69,11 +66,11 @@ class UserInfoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             }
         }
     }
-
+    
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let event = events[indexPath.row]
         let dequeued: AnyObject = tableView.dequeueReusableCellWithIdentifier("myeventcell", forIndexPath: indexPath)
-        let cell = dequeued as! EventCell
+        let cell = dequeued as! FavEventCell
         cell.eventName.text = event["name"] as? String
         cell.location.text = event["location"] as? String
         return cell
@@ -101,16 +98,15 @@ class UserInfoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             self.favs.reloadData()
         })
     }
-
+    
     
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     @IBOutlet weak var test: UILabel!
-    @IBOutlet weak var test2: UILabel!
     @IBOutlet weak var profileimage: UIImageView!
     @IBOutlet weak var favs: UITableView!
     

@@ -12,6 +12,7 @@
 		35404AC71CD5C20E00E84DC9 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35404AC61CD5C20E00E84DC9 /* UserModel.swift */; };
 		35868ED81CD428D800B62F53 /* NewUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35868ED71CD428D800B62F53 /* NewUserVC.swift */; };
 		35868EDA1CD4345500B62F53 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35868ED91CD4345500B62F53 /* LoginVC.swift */; };
+		35F1102F1CD70BE400BCCE22 /* FavEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F1102E1CD70BE400BCCE22 /* FavEventCell.swift */; };
 		7A2E02C61CD693B70017F21B /* EventNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2E02C51CD693B70017F21B /* EventNavigationController.swift */; };
 		7A2E02CA1CD696650017F21B /* NewEventTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2E02C91CD696650017F21B /* NewEventTableVC.swift */; };
 		7A2E02CE1CD6DA390017F21B /* DatePickerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2E02CD1CD6DA390017F21B /* DatePickerTextField.swift */; };
@@ -48,6 +49,7 @@
 		35404AC61CD5C20E00E84DC9 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		35868ED71CD428D800B62F53 /* NewUserVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewUserVC.swift; path = ../NewUserVC.swift; sourceTree = "<group>"; };
 		35868ED91CD4345500B62F53 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginVC.swift; path = ../LoginVC.swift; sourceTree = "<group>"; };
+		35F1102E1CD70BE400BCCE22 /* FavEventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavEventCell.swift; sourceTree = "<group>"; };
 		7A2E02C51CD693B70017F21B /* EventNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventNavigationController.swift; sourceTree = "<group>"; };
 		7A2E02C91CD696650017F21B /* NewEventTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewEventTableVC.swift; sourceTree = "<group>"; };
 		7A2E02CD1CD6DA390017F21B /* DatePickerTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerTextField.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				35404AC61CD5C20E00E84DC9 /* UserModel.swift */,
 				7ADD394C1CD3C1DB00700C40 /* UserInfoVC.swift */,
 				7ADD394E1CD3C1DB00700C40 /* Main.storyboard */,
+				35F1102E1CD70BE400BCCE22 /* FavEventCell.swift */,
 				7A2E02C91CD696650017F21B /* NewEventTableVC.swift */,
 				7A2E02C51CD693B70017F21B /* EventNavigationController.swift */,
 				35404AC01CD585E400E84DC9 /* EventTableViewController.swift */,
@@ -363,6 +366,7 @@
 				35868ED81CD428D800B62F53 /* NewUserVC.swift in Sources */,
 				7A2E02CA1CD696650017F21B /* NewEventTableVC.swift in Sources */,
 				7A2E02CE1CD6DA390017F21B /* DatePickerTextField.swift in Sources */,
+				35F1102F1CD70BE400BCCE22 /* FavEventCell.swift in Sources */,
 				7ADD394D1CD3C1DB00700C40 /* UserInfoVC.swift in Sources */,
 				35404AC71CD5C20E00E84DC9 /* UserModel.swift in Sources */,
 				7ADD39491CD3C1DB00700C40 /* AppDelegate.swift in Sources */,
