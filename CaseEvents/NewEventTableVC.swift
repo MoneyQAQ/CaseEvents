@@ -93,4 +93,22 @@ class NewEventTableVC: UITableViewController, UIImagePickerControllerDelegate, U
         view.endEditing(true)
     }
     
+    
+    
+    var ref = Firebase(url: "https://flickering-heat-8881.firebaseio.com/Events")
+    var base64String: NSString!
+    
+    @IBAction func createEvent(sender: AnyObject) {
+        if let oname = organizerName.text, l = location.text, im = eventImage.image {
+            let imageData: NSData = UIImagePNGRepresentation(im)!
+            self.base64String = imageData.base64EncodedStringWithOptions(NSDataBase64EncodingOptions())
+            let imString = self.base64String
+            let newEvent = ["organizer": oname, "location": l, "image": imString]
+            let newRef = ref.childByAutoId()
+            newRef.setValue(newEvent)
+        }
+    }
+    
+    
+    
 }

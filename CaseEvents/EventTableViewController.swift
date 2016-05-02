@@ -18,8 +18,20 @@ class EventTableViewController: UITableViewController {
         let event = events[indexPath.row]
         let dequeued: AnyObject = tableView.dequeueReusableCellWithIdentifier("eventcell", forIndexPath: indexPath)
         let cell = dequeued as! EventCell
-        cell.eventName.text = event["name"] as? String
-        cell.location.text = event["location"] as? String
+        if let ename = event["name"] as? String {
+            cell.eventName.text = ename
+        }
+        if let l = event["location"] as? String {
+            cell.location.text = l
+        }
+        if let oname = event["organizer"] as? String {
+            cell.oName.text = oname
+        }
+        if let base64String = event["image"] as? String {
+            let decodedData = NSData(base64EncodedString: base64String, options: NSDataBase64DecodingOptions())
+            let decodedImage = UIImage(data: decodedData!)!
+            cell.im.image = decodedImage
+        }
         return cell
     }
  

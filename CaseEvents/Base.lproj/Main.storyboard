@@ -204,7 +204,9 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="eventName" destination="bFs-s7-rr6" id="NTr-Vm-qcA"/>
+                                    <outlet property="im" destination="Q9Y-AV-O7f" id="7dA-el-JZC"/>
                                     <outlet property="location" destination="kQQ-tF-Ou5" id="lYE-7m-a7k"/>
+                                    <outlet property="oName" destination="QZ3-XH-SGx" id="wD9-eG-R6m"/>
                                     <segue destination="lw7-vl-ifh" kind="show" id="ZeM-MJ-FMk"/>
                                 </connections>
                             </tableViewCell>
@@ -631,6 +633,9 @@
                     <navigationItem key="navigationItem" title="Create New Event" id="00T-39-21M">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="hT6-If-7pt">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="createEvent:" destination="cmD-fx-IeG" id="7eT-6S-2Lt"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
@@ -895,7 +900,7 @@
                                         <rect key="frame" x="0.0" y="28" width="560" height="118"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Kcy-qr-0bk" id="xlo-eN-hW6">
-                                            <rect key="frame" x="0.0" y="0.0" width="560" height="118"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="117.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Nqt-6c-BQd">
@@ -961,7 +966,7 @@
                                                                         <rect key="frame" x="0.0" y="22" width="314" height="16"/>
                                                                     </variation>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="6pm - 8pm  |  Thwing Ballroom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="82Z-E8-R7f" userLabel="DateLocation">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6pm - 8pm  |  Thwing Ballroom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="82Z-E8-R7f" userLabel="DateLocation">
                                                                     <rect key="frame" x="0.0" y="39" width="474" height="14"/>
                                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="12"/>
                                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
