@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="edM-PU-cQS">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -203,9 +203,12 @@
                                     </variation>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="cost" destination="TaJ-vR-Ncx" id="pPX-en-Wwr"/>
+                                    <outlet property="date" destination="FJ9-Qw-YSI" id="BWf-me-8yl"/>
                                     <outlet property="eventName" destination="bFs-s7-rr6" id="NTr-Vm-qcA"/>
                                     <outlet property="im" destination="Q9Y-AV-O7f" id="7dA-el-JZC"/>
                                     <outlet property="location" destination="kQQ-tF-Ou5" id="lYE-7m-a7k"/>
+                                    <outlet property="month" destination="Jda-mk-06w" id="D7N-KK-wvL"/>
                                     <outlet property="oName" destination="QZ3-XH-SGx" id="wD9-eG-R6m"/>
                                     <segue destination="lw7-vl-ifh" kind="show" id="ZeM-MJ-FMk"/>
                                 </connections>
@@ -436,7 +439,7 @@
                                                         </mask>
                                                     </variation>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ex. 10510 Park Ln, Apt 101, Cleveland, OH 44106" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bMb-65-zMV">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="ex. Olin 304" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bMb-65-zMV">
                                                     <rect key="frame" x="8" y="42" width="584" height="30"/>
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
@@ -585,7 +588,7 @@
                                                         </mask>
                                                     </variation>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W1g-4j-buB">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W1g-4j-buB">
                                                     <rect key="frame" x="8" y="42" width="584" height="135"/>
                                                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
@@ -657,7 +660,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2268" y="-681"/>
+            <point key="canvasLocation" x="2268" y="-793"/>
         </scene>
         <!--Event Detail-->
         <scene sceneID="mm0-9q-l3Z">
@@ -844,7 +847,7 @@
             </objects>
             <point key="canvasLocation" x="2268" y="-3"/>
         </scene>
-        <!--User InfoVC-->
+        <!--My Info-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController id="8rJ-Kc-sve" customClass="UserInfoVC" customModule="CaseEvents" customModuleProvider="target" sceneMemberID="viewController">
@@ -1085,7 +1088,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="TTW-Yj-kl4"/>
+                    <navigationItem key="navigationItem" title="My Info" id="TTW-Yj-kl4"/>
                     <connections>
                         <outlet property="favs" destination="qio-KL-1Uf" id="LyQ-Pe-ejz"/>
                         <outlet property="profileimage" destination="Bob-bE-Ael" id="5fB-8v-wFM"/>
@@ -1231,7 +1234,7 @@
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eNS-sR-0cF">
-                                <rect key="frame" x="243" y="114" width="114.5" height="32.5"/>
+                                <rect key="frame" x="243" y="94" width="114.5" height="32.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <color key="textColor" red="0.97513089005235598" green="0.97513089005235598" blue="0.97513089005235598" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1267,7 +1270,7 @@
                             <constraint firstItem="NmV-lw-N7m" firstAttribute="top" secondItem="eVO-Kq-EKY" secondAttribute="bottom" constant="12" id="hXw-Wy-HgZ"/>
                             <constraint firstItem="417-Yh-PMI" firstAttribute="top" secondItem="Q5T-I1-wmq" secondAttribute="bottom" id="lEm-MJ-9pT"/>
                             <constraint firstItem="eVO-Kq-EKY" firstAttribute="centerY" secondItem="HcW-HJ-J9c" secondAttribute="centerY" constant="6.5" id="mqh-mh-AYu"/>
-                            <constraint firstItem="sFa-Ny-fF6" firstAttribute="top" secondItem="eNS-sR-0cF" secondAttribute="bottom" constant="100" id="nWW-fk-h0E"/>
+                            <constraint firstItem="sFa-Ny-fF6" firstAttribute="top" secondItem="eNS-sR-0cF" secondAttribute="bottom" constant="120" id="nWW-fk-h0E"/>
                             <constraint firstItem="eVO-Kq-EKY" firstAttribute="top" secondItem="sFa-Ny-fF6" secondAttribute="bottom" constant="15" id="opv-oZ-Oye"/>
                             <constraint firstItem="eVO-Kq-EKY" firstAttribute="leading" secondItem="eNS-sR-0cF" secondAttribute="leading" id="yox-mt-nAu"/>
                             <constraint firstItem="BQU-ky-fJB" firstAttribute="top" secondItem="eVO-Kq-EKY" secondAttribute="bottom" constant="36" id="zn3-H0-Fyl"/>
@@ -1319,7 +1322,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="DXg-75-WXv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.23614412474524601" green="0.43355030595607652" blue="0.79043275523560208" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1339,7 +1342,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="fMS-Xf-RbE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.078431372549019607" green="0.41176470588235292" blue="0.99215686274509807" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.23614412470000001" green="0.433550306" blue="0.7904327552" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

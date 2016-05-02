@@ -10,6 +10,8 @@ import UIKit
 
 class EventTableViewController: UITableViewController {
     
+    
+    
     var eventCount:UInt = 0
     var ref = Firebase(url: "https://flickering-heat-8881.firebaseio.com/Events")
     var events = [NSDictionary]()
@@ -22,7 +24,17 @@ class EventTableViewController: UITableViewController {
             cell.eventName.text = ename
         }
         if let l = event["location"] as? String {
-            cell.location.text = l
+            if let date = event["startTime"] as? String, ed = event["endTime"] as? String{
+                if date[4...5] == ed[4...5] {
+                    cell.location.text = date[13...20] + " - " + ed[13...20] + " | " + l
+                }
+                else {
+                    cell.location.text = String (Int(ed[5])! - Int(date[5])!) + " days | " + l
+                }
+            }
+            else {
+                cell.location.text = l
+            }
         }
         if let oname = event["organizer"] as? String {
             cell.oName.text = oname
@@ -31,6 +43,13 @@ class EventTableViewController: UITableViewController {
             let decodedData = NSData(base64EncodedString: base64String, options: NSDataBase64DecodingOptions())
             let decodedImage = UIImage(data: decodedData!)!
             cell.im.image = decodedImage
+        }
+        if let date = event["startTime"] as? String {
+            cell.month.text = date[0...2]
+            cell.date.text = date[4...5]
+        }
+        if let c = event["cost"] as? String {
+            cell.cost.text = "Public " + c
         }
         return cell
     }
@@ -64,5 +83,28 @@ class EventTableViewController: UITableViewController {
             self.tableView.reloadData()
         })
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let backItem = UIBarButtonItem()
+        backItem.title = "Cancel"
+        navigationItem.backBarButtonItem = backItem 
+    }
 
+}
+
+extension String {
+    
+    subscript (i: Int) -> Character {
+        return self[self.startIndex.advancedBy(i)]
+    }
+    
+    subscript (i: Int) -> String {
+        return String(self[i] as Character)
+    }
+    
+    subscript (r: Range<Int>) -> String {
+        let start = startIndex.advancedBy(r.startIndex)
+        let end = start.advancedBy(r.endIndex - r.startIndex)
+        return self[Range(start ..< end)]
+    }
 }

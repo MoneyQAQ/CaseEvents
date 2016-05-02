@@ -99,13 +99,22 @@ class NewEventTableVC: UITableViewController, UIImagePickerControllerDelegate, U
     var base64String: NSString!
     
     @IBAction func createEvent(sender: AnyObject) {
-        if let oname = organizerName.text, l = location.text, im = eventImage.image {
+        if let name = eventName.text, oname = organizerName.text, l = location.text, im = eventImage.image, c = cost.text, st = startTime.text, et = endTime.text, d = eventDescription.text {
             let imageData: NSData = UIImagePNGRepresentation(im)!
             self.base64String = imageData.base64EncodedStringWithOptions(NSDataBase64EncodingOptions())
             let imString = self.base64String
-            let newEvent = ["organizer": oname, "location": l, "image": imString]
+            let newEvent = ["name": name, "organizer": oname, "location": l, "image": imString, "cost": c, "startTime": st, "endTime": et, "description": d]
             let newRef = ref.childByAutoId()
             newRef.setValue(newEvent)
+            navigationController?.popViewControllerAnimated(true)
+        }
+        else {
+            let missingAlert = UIAlertView(title: "CaseEvents",
+                                    message: "All fields are required!",
+                                    delegate: self,
+                                    cancelButtonTitle: "OK"
+                                    )
+            missingAlert.show()
         }
     }
     

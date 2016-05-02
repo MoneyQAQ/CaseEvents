@@ -19,7 +19,7 @@ class DatePickerTextField: UITextField
         datePicker.backgroundColor = UIColor.whiteColor()
         self.clearButtonMode = .Never
         datePicker.datePickerMode = .DateAndTime
-        //datePicker.addTarget(self, action: #selector(dateChanged), forControlEvents: .ValueChanged)
+        datePicker.addTarget(self, action: #selector(dateChanged), forControlEvents: .ValueChanged)
         inputView = datePicker
     }
     
