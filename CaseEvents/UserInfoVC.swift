@@ -139,7 +139,7 @@ class UserInfoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             destinationVC.isFav = true
             for e in EventTableViewController.events{
                 if e["name"] as? String == senderCell.eventName.text {
-                    print(e["image"])
+//                    print(e["image"])
                     destinationVC.iString = e["image"] as? String
                 }
             }
