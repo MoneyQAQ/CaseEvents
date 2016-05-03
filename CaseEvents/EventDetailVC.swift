@@ -26,8 +26,8 @@ class EventDetailVC: UIViewController {
     @IBAction func shareOnTwitter(sender: AnyObject) {
     }
     
-    @IBAction func add2Calendar(sender: AnyObject) {
-    }
+//    @IBAction func add2Calendar(sender: AnyObject) {
+//    }
     
     @IBAction func addToFavs(sender: AnyObject) {
     }
