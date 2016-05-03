@@ -12,6 +12,7 @@ class FavEventCell: UITableViewCell {
 
     @IBOutlet weak var eventName: UILabel!
     @IBOutlet weak var oName: UILabel!
+    
     @IBOutlet weak var location: UILabel!
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var month: UILabel!
