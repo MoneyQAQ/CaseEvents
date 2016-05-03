@@ -104,7 +104,13 @@ class EventTableViewController: UITableViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let backItem = UIBarButtonItem()
         backItem.title = "Cancel"
-        navigationItem.backBarButtonItem = backItem 
+        navigationItem.backBarButtonItem = backItem
+        if segue.identifier == "detail"
+        {
+            let destinationVC = segue.destinationViewController as! EventDetailVC
+            let senderCell = sender as! EventCell
+            destinationVC.row = senderCell.row
+        }
     }
 
 }

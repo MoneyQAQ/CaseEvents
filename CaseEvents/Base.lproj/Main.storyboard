@@ -220,7 +220,7 @@
                                     <outlet property="location" destination="kQQ-tF-Ou5" id="lYE-7m-a7k"/>
                                     <outlet property="month" destination="Jda-mk-06w" id="D7N-KK-wvL"/>
                                     <outlet property="oName" destination="QZ3-XH-SGx" id="wD9-eG-R6m"/>
-                                    <segue destination="lw7-vl-ifh" kind="show" id="ZeM-MJ-FMk"/>
+                                    <segue destination="lw7-vl-ifh" kind="show" identifier="detail" id="ZeM-MJ-FMk"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -1354,7 +1354,7 @@
         <scene sceneID="vGe-1a-QDn">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="U0h-bT-Mxn" customClass="EventNavigationController" customModule="CaseEvents" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Events" image="first" id="Kg0-uS-4lf"/>
+                    <tabBarItem key="tabBarItem" title="Events" image="Calender" id="Kg0-uS-4lf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="DXg-75-WXv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1374,7 +1374,7 @@
         <scene sceneID="DUy-dI-LGe">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MXq-EK-mFr" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My info" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="My info" image="Avatar" id="cPa-gy-q4n"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="fMS-Xf-RbE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -1393,10 +1393,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Avatar" width="19" height="18"/>
         <image name="Calendar-icon" width="512" height="512"/>
+        <image name="Calender" width="23" height="19"/>
         <image name="back1" width="1909" height="2864"/>
         <image name="background2" width="1656" height="2946"/>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
     </resources>
 </document>
