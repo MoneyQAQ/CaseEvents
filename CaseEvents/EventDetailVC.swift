@@ -8,6 +8,7 @@
 
 import UIKit
 import EventKit
+import Social
 
 class EventDetailVC: UIViewController {
     
@@ -15,7 +16,7 @@ class EventDetailVC: UIViewController {
     
     var favsString: String?
     var row: Int?
-//    var socialController = SLComposeViewController()
+    var socialController = SLComposeViewController()
     
     @IBOutlet weak var eventName: UILabel!
     @IBOutlet weak var oName: UILabel!
@@ -26,34 +27,34 @@ class EventDetailVC: UIViewController {
     
     @IBOutlet weak var cost: UILabel!
     
-//    @IBAction func shareOnFacebook(sender: AnyObject)
-//    {
-//        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook) {
-//            socialController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
-//            socialController.setInitialText("Check out this Event: \(eventObj[EVENTS_TITLE]!) on #\(APP_NAME)")
+    @IBAction func shareOnFacebook(sender: AnyObject)
+    {
+        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook) {
+            socialController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+            socialController.setInitialText("Check out this Event:\" " + eventName.text! + "\" on CaseEvents!")
 //            socialController.addImage(eventImage.image)
-//            self.presentViewController(socialController, animated: true, completion: nil)
-//        } else {
-//            let alert: UIAlertView = UIAlertView(title: "Facebook", message: "Please login to your Facebook account in Settings", delegate: self, cancelButtonTitle: "OK")
-//            alert.show()
-//        }
-//    
-//        socialController.completionHandler = { result -> Void in
-//            var output = ""
-//            switch result {
-//            case SLComposeViewControllerResult.Cancelled: output = "Sharing cancelled"; break
-//            case SLComposeViewControllerResult.Done: output = "Your image is on Facebook!"; break
-//                //default: break
-//            }
-//            let alert = UIAlertView(title: "Facebook",
-//                                    message: output,
-//                                    delegate: nil,
-//                                    cancelButtonTitle: "OK")
-//            alert.show()
-//        }
+            self.presentViewController(socialController, animated: true, completion: nil)
+        } else {
+            let alert: UIAlertView = UIAlertView(title: "Facebook", message: "Please login to your Facebook account in Settings", delegate: self, cancelButtonTitle: "OK")
+            alert.show()
+        }
+    
+        socialController.completionHandler = { result -> Void in
+            var output = ""
+            switch result {
+            case SLComposeViewControllerResult.Cancelled: output = "Sharing cancelled"; break
+            case SLComposeViewControllerResult.Done: output = "Your image is on Facebook!"; break
+                //default: break
+            }
+            let alert = UIAlertView(title: "Facebook",
+                                    message: output,
+                                    delegate: nil,
+                                    cancelButtonTitle: "OK")
+            alert.show()
+        }
 
         
-//    }
+    }
     
     @IBAction func shareOnTwitter(sender: AnyObject) {
     }
