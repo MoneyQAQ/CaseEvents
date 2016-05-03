@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="edM-PU-cQS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="edM-PU-cQS">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -675,7 +675,7 @@
         <!--Event Detail-->
         <scene sceneID="mm0-9q-l3Z">
             <objects>
-                <viewController id="lw7-vl-ifh" sceneMemberID="viewController">
+                <viewController id="lw7-vl-ifh" customClass="EventDetailVC" customModule="CaseEvents" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mvG-ef-oYY"/>
                         <viewControllerLayoutGuide type="bottom" id="uOV-0N-9dZ"/>
@@ -805,6 +805,9 @@
                                                 <exclude reference="zXF-1f-DIL"/>
                                             </mask>
                                         </variation>
+                                        <connections>
+                                            <action selector="add2Calendar:" destination="lw7-vl-ifh" eventType="touchUpInside" id="vLC-el-yCl"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ei-DW-QhH">
                                         <rect key="frame" x="292" y="0.0" width="292" height="33"/>
@@ -819,6 +822,9 @@
                                                 <exclude reference="7N6-Nh-vnx"/>
                                             </mask>
                                         </variation>
+                                        <connections>
+                                            <action selector="addToFavs:" destination="lw7-vl-ifh" eventType="touchUpInside" id="P3c-I1-caF"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -843,6 +849,7 @@
                                         </variation>
                                         <connections>
                                             <action selector="add2Calendar:" destination="agW-z7-EV0" eventType="touchUpInside" id="X8f-Lk-AFv"/>
+                                            <action selector="shareOnFacebook:" destination="lw7-vl-ifh" eventType="touchUpInside" id="uCy-Sl-2nm"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Paf-OS-jnS">
@@ -860,6 +867,7 @@
                                         </variation>
                                         <connections>
                                             <action selector="addToFav:" destination="agW-z7-EV0" eventType="touchUpInside" id="J66-Z9-0Kj"/>
+                                            <action selector="shareOnTwitter:" destination="lw7-vl-ifh" eventType="touchUpInside" id="GRc-RN-qE5"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -904,6 +912,15 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Event Detail" id="6wZ-m3-nvM"/>
+                    <connections>
+                        <outlet property="cost" destination="VQh-OG-iXr" id="YRP-vH-rKO"/>
+                        <outlet property="date" destination="4Xu-IU-HkX" id="zr4-SZ-fcR"/>
+                        <outlet property="des" destination="Ftb-qN-5ju" id="XIu-lQ-cZF"/>
+                        <outlet property="eventName" destination="9Zb-eH-FqH" id="Tfp-Xg-8xX"/>
+                        <outlet property="location" destination="Z8Q-V3-UvD" id="5no-4n-rcZ"/>
+                        <outlet property="month" destination="s3k-MQ-8zO" id="3g8-dn-7tb"/>
+                        <outlet property="oName" destination="WB8-hI-vAL" id="TTq-NV-YBl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZeB-lf-6Kc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1070,6 +1087,9 @@
                                                                     <exclude reference="okj-6V-lXy"/>
                                                                 </mask>
                                                             </variation>
+                                                            <connections>
+                                                                <action selector="add2Calendar:" destination="Kcy-qr-0bk" eventType="touchUpInside" id="UtT-dZ-CKs"/>
+                                                            </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B7d-J0-KHF">
                                                             <rect key="frame" x="272" y="0.0" width="272" height="33"/>
@@ -1084,6 +1104,9 @@
                                                                     <exclude reference="T84-Ck-vYv"/>
                                                                 </mask>
                                                             </variation>
+                                                            <connections>
+                                                                <action selector="addToFav:" destination="Kcy-qr-0bk" eventType="touchUpInside" id="Olb-cr-bmu"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                     <constraints>
@@ -1101,8 +1124,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="date" destination="ljf-nw-CoC" id="Kwk-xp-HLT"/>
                                             <outlet property="eventName" destination="Fto-fw-VgQ" id="hfg-wp-SRz"/>
                                             <outlet property="location" destination="82Z-E8-R7f" id="GOk-KE-rJk"/>
+                                            <outlet property="month" destination="ZYy-oE-Ru8" id="lvQ-Kf-FaQ"/>
+                                            <outlet property="oname" destination="4WB-Gb-AKP" id="KZX-IC-2SM"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
