@@ -32,28 +32,21 @@ class UserInfoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             downloadImage(checkedUrl)
         }
         
-        /*
-        ref.observeEventType(.Value, withBlock: { snapshot in
-            for item in snapshot.children {
-                let child = item as! FDataSnapshot
-                if child.value.valueForKey("uid") as? String == uid {
-                    let favsString = child.value.valueForKey("faved") as? String
-                    self.faves = favsString!.characters.split{$0 == "/"}.map(String.init)
-                }
-            }
-        })*/
         
         faves = UserModel.faved.characters.split{$0 == "/"}.map(String.init)
         
         favs.delegate = self
         favs.dataSource = self
+        
         /*
         eref.observeEventType(.Value, withBlock: { snapshot in
             self.eventCount = snapshot.childrenCount
         })
  */
-        loadDataFromFirebase()
-        for item in self.events {
+        self.events = EventTableViewController.events
+        
+        for item in events {
+            print(item)
             let en = item["name"] as? String
             if faves.contains(en!) {
                 e2.append(item)
@@ -102,17 +95,7 @@ class UserInfoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     
     func loadDataFromFirebase() {
-        eref.observeEventType(.Value, withBlock: { snapshot in
-            var tempItems = [NSDictionary]()
-            for item in snapshot.children {
-                let child = item as! FDataSnapshot
-                let name = child.value as! NSDictionary
-                tempItems.append(name)
             }
-            self.events = tempItems
-            //self.favs.reloadData()
-        })
-    }
     
     
     
