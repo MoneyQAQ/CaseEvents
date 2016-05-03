@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="edM-PU-cQS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="edM-PU-cQS">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -121,11 +121,13 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="NSP-Gn-ssI" userLabel="Buttons">
                                             <rect key="frame" x="16" y="201" width="568" height="33"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DT6-Kk-d7R">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DT6-Kk-d7R">
                                                     <rect key="frame" x="0.0" y="0.0" width="284" height="33"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="288" id="fHG-HV-XX0"/>
                                                     </constraints>
+                                                    <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="18"/>
                                                     <state key="normal" title="Add to Calendar"/>
                                                     <variation key="default">
                                                         <mask key="constraints">
@@ -136,11 +138,13 @@
                                                         <action selector="add2Calendar:" destination="agW-z7-EV0" eventType="touchUpInside" id="4x6-4u-59Y"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGQ-Ee-4sz">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gGQ-Ee-4sz">
                                                     <rect key="frame" x="284" y="0.0" width="284" height="33"/>
+                                                    <color key="backgroundColor" red="1" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="288" id="CBg-Wj-9Ii"/>
                                                     </constraints>
+                                                    <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="18"/>
                                                     <state key="normal" title="Favorite"/>
                                                     <variation key="default">
                                                         <mask key="constraints">
@@ -780,47 +784,91 @@
                                 </subviews>
                             </stackView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Loading..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ftb-qN-5ju">
-                                <rect key="frame" x="8" y="273" width="584" height="208"/>
+                                <rect key="frame" x="8" y="273" width="584" height="159"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="VNq-h2-AoK" userLabel="Buttons">
-                                <rect key="frame" x="24" y="518" width="552" height="25"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Rsf-uc-aUf" userLabel="Buttons">
+                                <rect key="frame" x="8" y="510" width="584" height="33"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z1n-RT-SGM">
-                                        <rect key="frame" x="0.0" y="0.0" width="276" height="25"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E6n-co-pbe">
+                                        <rect key="frame" x="0.0" y="0.0" width="292" height="33"/>
+                                        <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="288" id="mwg-cp-40a"/>
+                                            <constraint firstAttribute="width" constant="288" id="zXF-1f-DIL"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="15"/>
+                                        <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="18"/>
                                         <state key="normal" title="Add to Calendar"/>
                                         <variation key="default">
                                             <mask key="constraints">
-                                                <exclude reference="mwg-cp-40a"/>
+                                                <exclude reference="zXF-1f-DIL"/>
                                             </mask>
                                         </variation>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="20H-X5-p3B">
-                                        <rect key="frame" x="276" y="0.0" width="276" height="25"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ei-DW-QhH">
+                                        <rect key="frame" x="292" y="0.0" width="292" height="33"/>
+                                        <color key="backgroundColor" red="1" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="288" id="otF-Ca-Xi4"/>
+                                            <constraint firstAttribute="width" constant="288" id="7N6-Nh-vnx"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="18"/>
                                         <state key="normal" title="Favorite"/>
                                         <variation key="default">
                                             <mask key="constraints">
-                                                <exclude reference="otF-Ca-Xi4"/>
+                                                <exclude reference="7N6-Nh-vnx"/>
                                             </mask>
                                         </variation>
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="25" id="WRw-dn-97X"/>
-                                    <constraint firstAttribute="height" constant="25" id="euG-iV-35j"/>
+                                    <constraint firstAttribute="height" constant="33" id="NgS-vR-SEZ"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="VVO-du-xpg" userLabel="Buttons">
+                                <rect key="frame" x="8" y="469" width="584" height="33"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAg-Jg-q2r">
+                                        <rect key="frame" x="0.0" y="0.0" width="292" height="33"/>
+                                        <color key="backgroundColor" red="0.20000000000000001" green="0.40000000000000002" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="288" id="vei-LL-ZjJ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="18"/>
+                                        <state key="normal" title="Share on Facebook"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="vei-LL-ZjJ"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="add2Calendar:" destination="agW-z7-EV0" eventType="touchUpInside" id="X8f-Lk-AFv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Paf-OS-jnS">
+                                        <rect key="frame" x="292" y="0.0" width="292" height="33"/>
+                                        <color key="backgroundColor" red="0.20000000000000001" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="288" id="Ri2-tr-6xQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="18"/>
+                                        <state key="normal" title="Share on Twitter"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Ri2-tr-6xQ"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <action selector="addToFav:" destination="agW-z7-EV0" eventType="touchUpInside" id="J66-Z9-0Kj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="33" id="SEs-m6-2cP"/>
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cost: Public $10 - $20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VQh-OG-iXr">
-                                <rect key="frame" x="8" y="489" width="584" height="21"/>
+                                <rect key="frame" x="8" y="440" width="584" height="21"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -828,24 +876,32 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="VVO-du-xpg" secondAttribute="trailing" constant="8" id="17y-q1-WIl"/>
                             <constraint firstAttribute="trailing" secondItem="xRL-nh-sh2" secondAttribute="trailing" constant="8" id="4dt-fz-ewp"/>
                             <constraint firstAttribute="trailing" secondItem="Ftb-qN-5ju" secondAttribute="trailing" constant="8" id="8DC-zm-qbp"/>
                             <constraint firstItem="Ftb-qN-5ju" firstAttribute="top" secondItem="xRL-nh-sh2" secondAttribute="bottom" constant="8" id="8hg-XT-kDh"/>
+                            <constraint firstItem="VVO-du-xpg" firstAttribute="top" secondItem="VQh-OG-iXr" secondAttribute="bottom" constant="8" id="Ecm-Wb-xrt"/>
                             <constraint firstItem="VQh-OG-iXr" firstAttribute="top" secondItem="Ftb-qN-5ju" secondAttribute="bottom" constant="8" id="I2w-Bk-IIr"/>
+                            <constraint firstItem="Rsf-uc-aUf" firstAttribute="top" secondItem="VVO-du-xpg" secondAttribute="bottom" constant="8" id="ImF-hO-MxA"/>
+                            <constraint firstItem="VVO-du-xpg" firstAttribute="leading" secondItem="2wF-pu-zBr" secondAttribute="leading" constant="8" id="M0d-7D-fXx"/>
                             <constraint firstItem="xRL-nh-sh2" firstAttribute="top" secondItem="gnL-QD-Iqk" secondAttribute="bottom" constant="8" id="Tce-Xx-NG9"/>
+                            <constraint firstItem="Rsf-uc-aUf" firstAttribute="leading" secondItem="2wF-pu-zBr" secondAttribute="leading" constant="8" id="WCA-XX-v5r"/>
                             <constraint firstAttribute="trailing" secondItem="VQh-OG-iXr" secondAttribute="trailing" constant="8" id="Z3d-Ud-2YE"/>
                             <constraint firstItem="xRL-nh-sh2" firstAttribute="leading" secondItem="2wF-pu-zBr" secondAttribute="leading" constant="8" id="bRL-28-Y2O"/>
+                            <constraint firstAttribute="trailing" secondItem="Rsf-uc-aUf" secondAttribute="trailing" constant="8" id="bp6-vv-woy"/>
                             <constraint firstItem="Ftb-qN-5ju" firstAttribute="leading" secondItem="2wF-pu-zBr" secondAttribute="leading" constant="8" id="eQD-AC-KZ0"/>
                             <constraint firstAttribute="trailing" secondItem="gnL-QD-Iqk" secondAttribute="trailing" id="hEm-nn-KRe"/>
-                            <constraint firstAttribute="trailing" secondItem="VNq-h2-AoK" secondAttribute="trailing" constant="24" id="ia3-jv-f5j"/>
-                            <constraint firstItem="uOV-0N-9dZ" firstAttribute="top" secondItem="VNq-h2-AoK" secondAttribute="bottom" constant="8" id="l4Z-Sc-B75"/>
                             <constraint firstItem="VQh-OG-iXr" firstAttribute="leading" secondItem="2wF-pu-zBr" secondAttribute="leading" constant="8" id="nX7-PR-FJu"/>
-                            <constraint firstItem="VNq-h2-AoK" firstAttribute="leading" secondItem="2wF-pu-zBr" secondAttribute="leading" constant="24" id="oDY-eH-udD"/>
                             <constraint firstItem="gnL-QD-Iqk" firstAttribute="leading" secondItem="2wF-pu-zBr" secondAttribute="leading" id="ppy-dr-CDb"/>
                             <constraint firstItem="VQh-OG-iXr" firstAttribute="top" secondItem="Ftb-qN-5ju" secondAttribute="bottom" constant="8" id="rGB-5w-QNS"/>
-                            <constraint firstItem="VNq-h2-AoK" firstAttribute="top" secondItem="VQh-OG-iXr" secondAttribute="bottom" constant="8" id="vae-S5-fmq"/>
                             <constraint firstItem="gnL-QD-Iqk" firstAttribute="top" secondItem="mvG-ef-oYY" secondAttribute="bottom" id="yP0-BM-jnt"/>
+                            <constraint firstItem="uOV-0N-9dZ" firstAttribute="top" secondItem="Rsf-uc-aUf" secondAttribute="bottom" constant="8" id="zCc-wK-N1w"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="I2w-Bk-IIr"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Event Detail" id="6wZ-m3-nvM"/>
                 </viewController>
@@ -898,18 +954,18 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="118" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qio-KL-1Uf">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="116" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qio-KL-1Uf">
                                 <rect key="frame" x="20" y="214" width="560" height="337"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="600" id="7i3-hh-xqd"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myeventcell" rowHeight="118" id="Kcy-qr-0bk" customClass="FavEventCell" customModule="CaseEvents" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="560" height="118"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myeventcell" rowHeight="116" id="Kcy-qr-0bk" customClass="FavEventCell" customModule="CaseEvents" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="560" height="116"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Kcy-qr-0bk" id="xlo-eN-hW6">
-                                            <rect key="frame" x="0.0" y="0.0" width="560" height="117.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="115.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Nqt-6c-BQd">
@@ -998,55 +1054,51 @@
                                                         </stackView>
                                                     </subviews>
                                                 </stackView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Ejp-Kb-xDw" userLabel="Buttons">
-                                                    <rect key="frame" x="8" y="85" width="544" height="25"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="E0m-Ec-1fM" userLabel="Buttons">
+                                                    <rect key="frame" x="8" y="74" width="544" height="33"/>
                                                     <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SpO-dG-8w4">
-                                                            <rect key="frame" x="0.0" y="0.0" width="272" height="25"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9p4-mu-Uy4">
+                                                            <rect key="frame" x="0.0" y="0.0" width="272" height="33"/>
+                                                            <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="288" id="WnY-ws-2ze"/>
+                                                                <constraint firstAttribute="width" constant="288" id="okj-6V-lXy"/>
                                                             </constraints>
+                                                            <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="18"/>
                                                             <state key="normal" title="Add to Calendar"/>
                                                             <variation key="default">
                                                                 <mask key="constraints">
-                                                                    <exclude reference="WnY-ws-2ze"/>
+                                                                    <exclude reference="okj-6V-lXy"/>
                                                                 </mask>
                                                             </variation>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vp2-yD-i0G">
-                                                            <rect key="frame" x="272" y="0.0" width="272" height="25"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B7d-J0-KHF">
+                                                            <rect key="frame" x="272" y="0.0" width="272" height="33"/>
+                                                            <color key="backgroundColor" red="1" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="288" id="jWl-HH-2vS"/>
+                                                                <constraint firstAttribute="width" constant="288" id="T84-Ck-vYv"/>
                                                             </constraints>
-                                                            <state key="normal" title="Unfavorite"/>
+                                                            <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="18"/>
+                                                            <state key="normal" title="Favorite"/>
                                                             <variation key="default">
                                                                 <mask key="constraints">
-                                                                    <exclude reference="jWl-HH-2vS"/>
+                                                                    <exclude reference="T84-Ck-vYv"/>
                                                                 </mask>
                                                             </variation>
                                                         </button>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="25" id="YH2-aJ-R5j"/>
+                                                        <constraint firstAttribute="height" constant="33" id="0jO-5h-w2I"/>
                                                     </constraints>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Ejp-Kb-xDw" firstAttribute="leading" secondItem="xlo-eN-hW6" secondAttribute="leadingMargin" constant="8" id="LO9-9r-C1Q"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Ejp-Kb-xDw" secondAttribute="trailing" id="Sii-ue-N1O"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Ejp-Kb-xDw" secondAttribute="bottom" id="ZPe-Xw-Z03"/>
-                                                <constraint firstItem="Ejp-Kb-xDw" firstAttribute="leading" secondItem="xlo-eN-hW6" secondAttribute="leadingMargin" id="hQZ-Mb-7MG"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Ejp-Kb-xDw" secondAttribute="trailing" constant="354" id="k3r-fR-LKj"/>
+                                                <constraint firstAttribute="trailing" secondItem="E0m-Ec-1fM" secondAttribute="trailing" constant="8" id="R8U-sH-MJF"/>
+                                                <constraint firstItem="E0m-Ec-1fM" firstAttribute="leading" secondItem="xlo-eN-hW6" secondAttribute="leading" constant="8" id="Tib-9D-Req"/>
                                                 <constraint firstItem="Nqt-6c-BQd" firstAttribute="leading" secondItem="xlo-eN-hW6" secondAttribute="leadingMargin" id="mUH-G2-HsR"/>
                                                 <constraint firstItem="Nqt-6c-BQd" firstAttribute="top" secondItem="xlo-eN-hW6" secondAttribute="topMargin" id="mja-V3-mw0"/>
+                                                <constraint firstItem="E0m-Ec-1fM" firstAttribute="top" secondItem="Nqt-6c-BQd" secondAttribute="bottom" constant="8" id="pUP-g9-DQx"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="Nqt-6c-BQd" secondAttribute="trailing" id="trc-Nf-7gQ"/>
                                             </constraints>
-                                            <variation key="default">
-                                                <mask key="constraints">
-                                                    <exclude reference="LO9-9r-C1Q"/>
-                                                    <exclude reference="k3r-fR-LKj"/>
-                                                </mask>
-                                            </variation>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="eventName" destination="Fto-fw-VgQ" id="hfg-wp-SRz"/>
