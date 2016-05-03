@@ -25,7 +25,7 @@ class NewUserVC: UIViewController {
                                 self.alert.text = "User name already exists!"
                             } else {
                                 let uid = result["uid"] as? String
-                                let newUserInfo = ["uid": uid!, "username": "None", "email": newemail]
+                                let newUserInfo = ["uid": uid!, "username": "None", "email": newemail, "faved": ""]
                                 let newRef = self.uref.childByAppendingPath(uid)
                                 newRef.setValue(newUserInfo)
                                 print("Successfully created user account with uid: \(uid)")

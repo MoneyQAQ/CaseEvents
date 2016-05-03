@@ -12,6 +12,7 @@ class EventTableViewController: UITableViewController {
     
     var eventCount:UInt = 0
     var ref = Firebase(url: "https://flickering-heat-8881.firebaseio.com/Events")
+    var uref = Firebase(url: "https://flickering-heat-8881.firebaseio.com/Users")
     static var events = [NSDictionary]()
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -56,10 +57,26 @@ class EventTableViewController: UITableViewController {
      
     override func viewDidLoad() {
         super.viewDidLoad()
+        let cuid = UserModel.currentUser.uid
         ref.observeEventType(.Value, withBlock: { snapshot in
             self.eventCount = snapshot.childrenCount
         })
         loadDataFromFirebase()
+        uref.observeEventType(.Value, withBlock: { snapshot in
+            print(snapshot.value)
+            for item in snapshot.children {
+                let child = item as! FDataSnapshot
+                if child.value.valueForKey("uid") as? String == cuid {
+                    if let s = child.value.valueForKey("faved") as? String{
+                        UserModel.faved = s
+                    }
+                    else {
+                        UserModel.faved = ""
+                    }
+                }
+            }
+        })
+
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {

@@ -26,27 +26,18 @@ class EventCell: UITableViewCell {
     
     @IBAction func addToFav(sender: AnyObject) {
         
-        let cuid = UserModel.currentUser.uid
-        ref.observeEventType(.Value, withBlock: { snapshot in
-            print(snapshot.value)
-            for item in snapshot.children {
-                let child = item as! FDataSnapshot
-                if child.value.valueForKey("uid") as? String == cuid {
-                    if let s = child.value.valueForKey("faved") as? String{
-                        self.favsString = s
-                    }
-                    else {
-                        self.favsString = ""
-                    }
-                }
-            }
-        })
+        updateFavs()
         
-        ref.updateChildValues([
-            cuid + "/faved": self.favsString! + "/" + self.eventName.text!
-        ])
     }
     
+    
+    func updateFavs() {
+        let cuid = UserModel.currentUser.uid
+        ref.updateChildValues([
+            cuid + "/faved": UserModel.faved + "/" + self.eventName.text!
+        ])
+    }
+   
     
     
     @IBAction func add2Calendar(sender: UIButton)

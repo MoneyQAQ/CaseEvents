@@ -11,5 +11,6 @@ import Foundation
 class UserModel {
     
     static var currentUser = FAuthData()
+    static var faved = String()
 
 }
