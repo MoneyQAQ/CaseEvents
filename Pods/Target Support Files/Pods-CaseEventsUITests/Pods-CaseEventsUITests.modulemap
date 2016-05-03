@@ -1,0 +1,6 @@
+framework module Pods_CaseEventsUITests {
+  umbrella header "Pods-CaseEventsUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

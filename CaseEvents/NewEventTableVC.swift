@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class NewEventTableVC: UITableViewController, UIImagePickerControllerDelegate, UIAlertViewDelegate, UINavigationControllerDelegate
 {

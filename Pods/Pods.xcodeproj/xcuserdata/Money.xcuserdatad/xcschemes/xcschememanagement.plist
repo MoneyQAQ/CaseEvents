@@ -9,6 +9,21 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-CaseEvents.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-CaseEventsTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-CaseEventsUITests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>569735B422E0E4CEEFC5C6955AFDE3A5</key>
+		<key>213F98E247D23F4187B478E79780B295</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C06900910C3A6326D437273407CBB0AC</key>
+		<key>6FAC5F750CEAFBFFE73F9C7F644BE44F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A2F6E21B670DC565238510DE02DEA9F1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B7AC9326D819482593FE118E915409D7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FCFEF6714DC869E1A7C5F5394CE61348</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -8,6 +8,7 @@
 
 import UIKit
 import EventKit
+import Firebase
 
 class EventCell: UITableViewCell {
     

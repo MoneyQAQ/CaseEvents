@@ -9,6 +9,7 @@
 import UIKit
 import EventKit
 import Social
+import Firebase
 
 class EventDetailVC: UIViewController {
     
