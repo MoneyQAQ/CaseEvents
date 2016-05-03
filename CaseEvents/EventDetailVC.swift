@@ -122,14 +122,18 @@ class EventDetailVC: UIViewController {
                 granted, error in
                 self.createCalendarEvent(eventStore, title: self.eventName.text!, startDate: startNSDate, endDate: endNSDate, location: location)
             })
-        } else {
-            createCalendarEvent(eventStore, title: self.eventName.text!, startDate: startNSDate, endDate: endNSDate, location: location)
         }
-        let alert = UIAlertView(title: "Success!",
+        else
+        {
+            if createCalendarEvent(eventStore, title: self.eventName.text!, startDate: startNSDate, endDate: endNSDate, location: location)
+            {
+                let alert = UIAlertView(title: "Success!",
                                 message: "Saved\" " + self.eventName.text! + "\" to Calendar",
                                 delegate: nil,
                                 cancelButtonTitle: "Hurray!")
-        alert.show()
+                alert.show()
+            }
+        }
 
     }
     
@@ -137,7 +141,8 @@ class EventDetailVC: UIViewController {
     }
     
     // Creates an event in the EKEventStore. The method assumes the eventStore is created and accessible
-    func createCalendarEvent(eventStore: EKEventStore, title: String, startDate: NSDate, endDate: NSDate, location: String?) {
+    func createCalendarEvent(eventStore: EKEventStore, title: String, startDate: NSDate, endDate: NSDate, location: String?) -> Bool
+    {
         let event = EKEvent(eventStore: eventStore)
         
         event.title = title
@@ -145,7 +150,8 @@ class EventDetailVC: UIViewController {
         event.endDate = endDate
         event.location = location
         event.calendar = eventStore.defaultCalendarForNewEvents
-        do {
+        do
+        {
             try eventStore.saveEvent(event, span: .ThisEvent)
         } catch {
             let alert = UIAlertView(title: "Failed",
@@ -153,7 +159,9 @@ class EventDetailVC: UIViewController {
                                     delegate: nil,
                                     cancelButtonTitle: "OK")
             alert.show()
+            return false
         }
+        return true
     }
 
     
