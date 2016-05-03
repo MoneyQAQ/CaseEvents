@@ -15,6 +15,7 @@ class EventDetailVC: UIViewController {
     
     var favsString: String?
     var row: Int?
+//    var socialController = SLComposeViewController()
     
     @IBOutlet weak var eventName: UILabel!
     @IBOutlet weak var oName: UILabel!
@@ -25,9 +26,34 @@ class EventDetailVC: UIViewController {
     
     @IBOutlet weak var cost: UILabel!
     
-    @IBAction func shareOnFacebook(sender: AnyObject) {
+//    @IBAction func shareOnFacebook(sender: AnyObject)
+//    {
+//        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook) {
+//            socialController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+//            socialController.setInitialText("Check out this Event: \(eventObj[EVENTS_TITLE]!) on #\(APP_NAME)")
+//            socialController.addImage(eventImage.image)
+//            self.presentViewController(socialController, animated: true, completion: nil)
+//        } else {
+//            let alert: UIAlertView = UIAlertView(title: "Facebook", message: "Please login to your Facebook account in Settings", delegate: self, cancelButtonTitle: "OK")
+//            alert.show()
+//        }
+//    
+//        socialController.completionHandler = { result -> Void in
+//            var output = ""
+//            switch result {
+//            case SLComposeViewControllerResult.Cancelled: output = "Sharing cancelled"; break
+//            case SLComposeViewControllerResult.Done: output = "Your image is on Facebook!"; break
+//                //default: break
+//            }
+//            let alert = UIAlertView(title: "Facebook",
+//                                    message: output,
+//                                    delegate: nil,
+//                                    cancelButtonTitle: "OK")
+//            alert.show()
+//        }
+
         
-    }
+//    }
     
     @IBAction func shareOnTwitter(sender: AnyObject) {
     }
@@ -71,7 +97,11 @@ class EventDetailVC: UIViewController {
         do {
             try eventStore.saveEvent(event, span: .ThisEvent)
         } catch {
-            print("Bad things happened")
+            let alert = UIAlertView(title: "Failed",
+                                    message: "Access to Calendar was declined, please check system configuration",
+                                    delegate: nil,
+                                    cancelButtonTitle: "OK")
+            alert.show()
         }
     }
 

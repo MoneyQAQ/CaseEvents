@@ -14,6 +14,8 @@
 		35868ED81CD428D800B62F53 /* NewUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35868ED71CD428D800B62F53 /* NewUserVC.swift */; };
 		35868EDA1CD4345500B62F53 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35868ED91CD4345500B62F53 /* LoginVC.swift */; };
 		35F1102F1CD70BE400BCCE22 /* FavEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F1102E1CD70BE400BCCE22 /* FavEventCell.swift */; };
+		7A02F7811CD83ABB002E2B5A /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A02F7801CD83ABB002E2B5A /* CoreMedia.framework */; };
+		7A02F7831CD83BA2002E2B5A /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A02F7821CD83BA2002E2B5A /* Social.framework */; };
 		7A2E02C61CD693B70017F21B /* EventNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2E02C51CD693B70017F21B /* EventNavigationController.swift */; };
 		7A2E02CA1CD696650017F21B /* NewEventTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2E02C91CD696650017F21B /* NewEventTableVC.swift */; };
 		7A2E02CE1CD6DA390017F21B /* DatePickerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2E02CD1CD6DA390017F21B /* DatePickerTextField.swift */; };
@@ -24,7 +26,6 @@
 		7ADD39551CD3C1DB00700C40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ADD39531CD3C1DB00700C40 /* LaunchScreen.storyboard */; };
 		7ADD39601CD3C1DB00700C40 /* CaseEventsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADD395F1CD3C1DB00700C40 /* CaseEventsTests.swift */; };
 		7ADD396B1CD3C1DB00700C40 /* CaseEventsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADD396A1CD3C1DB00700C40 /* CaseEventsUITests.swift */; };
-		B7DFA5A11E18344214D91F63 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E6BD1D21C2AB06E4939002E /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,8 @@
 		35868ED71CD428D800B62F53 /* NewUserVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewUserVC.swift; path = ../NewUserVC.swift; sourceTree = "<group>"; };
 		35868ED91CD4345500B62F53 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginVC.swift; path = ../LoginVC.swift; sourceTree = "<group>"; };
 		35F1102E1CD70BE400BCCE22 /* FavEventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavEventCell.swift; sourceTree = "<group>"; };
+		7A02F7801CD83ABB002E2B5A /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CoreMedia.framework; sourceTree = DEVELOPER_DIR; };
+		7A02F7821CD83BA2002E2B5A /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		7A2E02C51CD693B70017F21B /* EventNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventNavigationController.swift; sourceTree = "<group>"; };
 		7A2E02C91CD696650017F21B /* NewEventTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewEventTableVC.swift; sourceTree = "<group>"; };
 		7A2E02CD1CD6DA390017F21B /* DatePickerTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerTextField.swift; sourceTree = "<group>"; };
@@ -69,7 +72,6 @@
 		7ADD39661CD3C1DB00700C40 /* CaseEventsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CaseEventsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ADD396A1CD3C1DB00700C40 /* CaseEventsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseEventsUITests.swift; sourceTree = "<group>"; };
 		7ADD396C1CD3C1DB00700C40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8E6BD1D21C2AB06E4939002E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEF9D497DA13D13F53FBBB94 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F8A249448BD567DC838FFB21 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,7 +81,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B7DFA5A11E18344214D91F63 /* libPods.a in Frameworks */,
+				7A02F7831CD83BA2002E2B5A /* Social.framework in Frameworks */,
+				7A02F7811CD83ABB002E2B5A /* CoreMedia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,7 +170,8 @@
 		82C57FF0AEBD989E84CCABB3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8E6BD1D21C2AB06E4939002E /* libPods.a */,
+				7A02F7821CD83BA2002E2B5A /* Social.framework */,
+				7A02F7801CD83ABB002E2B5A /* CoreMedia.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

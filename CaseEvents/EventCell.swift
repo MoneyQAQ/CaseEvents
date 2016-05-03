@@ -75,7 +75,11 @@ class EventCell: UITableViewCell {
         do {
             try eventStore.saveEvent(event, span: .ThisEvent)
         } catch {
-            print("Bad things happened")
+            let alert = UIAlertView(title: "Failed",
+                                    message: "Access to Calendar was declined, please check system configuration",
+                                    delegate: nil,
+                                    cancelButtonTitle: "OK")
+            alert.show()
         }
     }
 
