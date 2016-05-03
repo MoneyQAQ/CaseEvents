@@ -50,11 +50,12 @@ class EventDetailVC: UIViewController {
             if let base64String = iString {
                 let decodedData = NSData(base64EncodedString: base64String, options: NSDataBase64DecodingOptions())
                 let decodedImage = UIImage(data: decodedData!)!
-                self.image.image = decodedImage
+                image.image = decodedImage
             }
         }
         else {
             event = EventTableViewController.events[row!]
+            image.image = self.tempImage
         }
         eventName.text = event["name"] as? String
         oName.text = event["organizer"] as? String
@@ -78,7 +79,7 @@ class EventDetailVC: UIViewController {
         }
         des.text = event["description"] as? String
         cost.text = event["cost"] as? String
-        image.image = self.tempImage
+        
     }
     
     @IBAction func shareOnFacebook(sender: AnyObject)
