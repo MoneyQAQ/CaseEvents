@@ -88,7 +88,7 @@ class UserInfoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                     cell.location.text = date[13...20] + " - " + ed[13...20] + " | " + l
                 }
                 else {
-                    cell.location.text = String (Int(ed[5])! - Int(date[5])!) + " days | " + l
+                    cell.location.text = date[13...20] + " - " + ed[0...5] + " " + ed[13...20] + " | " + l
                 }
             }
             else {

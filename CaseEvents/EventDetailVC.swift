@@ -30,7 +30,7 @@ class EventDetailVC: UIViewController {
     
     override func viewDidLoad() {
         let event = EventTableViewController.events[row!]
-        eventName.text = event["startTime"] as? String
+        eventName.text = event["name"] as? String
         oName.text = event["organizer"] as? String
         let st = event["startTime"] as? String
         let et = event["endTime"] as? String
@@ -41,8 +41,10 @@ class EventDetailVC: UIViewController {
             location.text = stt + " - " + ett + " | " + l!
         }
         else {
-            let tt = Int(et![5])! - Int(st![5])!
-            location.text = String (tt) + " days | " + l!
+            let stt = st![13...20]
+            let ett = et![13...20]
+            let edt = et![0...5]
+            location.text = stt + " - " + edt + " " + ett + " | " + l!
         }
         if let date = event["startTime"] as? String {
             month.text = date[0...2]
@@ -138,6 +140,10 @@ class EventDetailVC: UIViewController {
     }
     
     @IBAction func addToFavs(sender: AnyObject) {
+        let cuid = UserModel.currentUser.uid
+        ref.updateChildValues([
+            cuid + "/faved": UserModel.faved + "/" + self.eventName.text!
+            ])
     }
     
     // Creates an event in the EKEventStore. The method assumes the eventStore is created and accessible
