@@ -11,8 +11,11 @@ import EventKit
 
 class EventCell: UITableViewCell {
     
+    let ref = Firebase(url: "https://flickering-heat-8881.firebaseio.com/Users")
     
+    var favsString: String?
     var row: Int?
+    
     @IBOutlet weak var eventName: UILabel!
     @IBOutlet weak var location: UILabel!
     @IBOutlet weak var oName: UILabel!
@@ -23,6 +26,25 @@ class EventCell: UITableViewCell {
     
     @IBAction func addToFav(sender: AnyObject) {
         
+        let cuid = UserModel.currentUser.uid
+        ref.observeEventType(.Value, withBlock: { snapshot in
+            print(snapshot.value)
+            for item in snapshot.children {
+                let child = item as! FDataSnapshot
+                if child.value.valueForKey("uid") as? String == cuid {
+                    if let s = child.value.valueForKey("faved") as? String{
+                        self.favsString = s
+                    }
+                    else {
+                        self.favsString = ""
+                    }
+                }
+            }
+        })
+        
+        ref.updateChildValues([
+            cuid + "/faved": self.favsString! + "/" + self.eventName.text!
+        ])
     }
     
     

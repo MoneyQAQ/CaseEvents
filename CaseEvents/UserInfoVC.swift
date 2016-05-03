@@ -30,15 +30,19 @@ class UserInfoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             downloadImage(checkedUrl)
         }
         
-        /*
+        
         ref.observeEventType(.Value, withBlock: { snapshot in
             for item in snapshot.children {
                 let child = item as! FDataSnapshot
                 if child.value.valueForKey("uid") as? String == uid {
-                    self.test2.text = child.value.valueForKey("username") as? String
+                    let favsString = child.value.valueForKey("faved") as? String
+                    let favs = favsString!.characters.split{$0 == "/"}.map(String.init)
+                    for item in favs {
+                        print(item)
+                    }
                 }
             }
-        })*/
+        })
         
         favs.delegate = self
         favs.dataSource = self

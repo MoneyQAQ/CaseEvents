@@ -26,7 +26,7 @@ class NewUserVC: UIViewController {
                             } else {
                                 let uid = result["uid"] as? String
                                 let newUserInfo = ["uid": uid!, "username": "None", "email": newemail]
-                                let newRef = self.uref.childByAutoId()
+                                let newRef = self.uref.childByAppendingPath(uid)
                                 newRef.setValue(newUserInfo)
                                 print("Successfully created user account with uid: \(uid)")
                                 self.performSegueWithIdentifier("accountcreated", sender: nil)
