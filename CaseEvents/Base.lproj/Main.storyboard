@@ -805,6 +805,9 @@
                                                 <exclude reference="zXF-1f-DIL"/>
                                             </mask>
                                         </variation>
+                                        <connections>
+                                            <action selector="add2Calendar:" destination="lw7-vl-ifh" eventType="touchUpInside" id="X4h-x6-wqL"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ei-DW-QhH">
                                         <rect key="frame" x="292" y="0.0" width="292" height="33"/>
