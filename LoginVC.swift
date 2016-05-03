@@ -10,6 +10,7 @@ import UIKit
 
 class LoginVC: UIViewController {
     
+    
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var failed: UILabel!
@@ -24,12 +25,12 @@ class LoginVC: UIViewController {
                         if error != nil {
                             self.failed.text = "Login Failed. Please try again."
                         } else {
+                            UserModel.currentUser = authData
                             self.performSegueWithIdentifier("loggedin", sender: nil)
                         }
                 })
             }
         }
     }
-    
 
 }

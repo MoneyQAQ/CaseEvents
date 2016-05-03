@@ -7,11 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35404AC11CD585E400E84DC9 /* EventTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35404AC01CD585E400E84DC9 /* EventTableViewController.swift */; };
+		35404AC51CD5872300E84DC9 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35404AC41CD5872300E84DC9 /* EventCell.swift */; };
+		35404AC71CD5C20E00E84DC9 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35404AC61CD5C20E00E84DC9 /* UserModel.swift */; };
+		3567D8B31CD82C2000F13259 /* EventDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3567D8B21CD82C2000F13259 /* EventDetailVC.swift */; };
 		35868ED81CD428D800B62F53 /* NewUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35868ED71CD428D800B62F53 /* NewUserVC.swift */; };
 		35868EDA1CD4345500B62F53 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35868ED91CD4345500B62F53 /* LoginVC.swift */; };
+		35F1102F1CD70BE400BCCE22 /* FavEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35F1102E1CD70BE400BCCE22 /* FavEventCell.swift */; };
+		7A2E02C61CD693B70017F21B /* EventNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2E02C51CD693B70017F21B /* EventNavigationController.swift */; };
+		7A2E02CA1CD696650017F21B /* NewEventTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2E02C91CD696650017F21B /* NewEventTableVC.swift */; };
+		7A2E02CE1CD6DA390017F21B /* DatePickerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2E02CD1CD6DA390017F21B /* DatePickerTextField.swift */; };
 		7ADD39491CD3C1DB00700C40 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADD39481CD3C1DB00700C40 /* AppDelegate.swift */; };
-		7ADD394B1CD3C1DB00700C40 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADD394A1CD3C1DB00700C40 /* FirstViewController.swift */; };
-		7ADD394D1CD3C1DB00700C40 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADD394C1CD3C1DB00700C40 /* SecondViewController.swift */; };
+		7ADD394D1CD3C1DB00700C40 /* UserInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADD394C1CD3C1DB00700C40 /* UserInfoVC.swift */; };
 		7ADD39501CD3C1DB00700C40 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ADD394E1CD3C1DB00700C40 /* Main.storyboard */; };
 		7ADD39521CD3C1DB00700C40 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ADD39511CD3C1DB00700C40 /* Assets.xcassets */; };
 		7ADD39551CD3C1DB00700C40 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ADD39531CD3C1DB00700C40 /* LaunchScreen.storyboard */; };
@@ -38,13 +45,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		35404AC01CD585E400E84DC9 /* EventTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTableViewController.swift; sourceTree = "<group>"; };
+		35404AC41CD5872300E84DC9 /* EventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
+		35404AC61CD5C20E00E84DC9 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		3567D8B21CD82C2000F13259 /* EventDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailVC.swift; sourceTree = "<group>"; };
 		35868ED71CD428D800B62F53 /* NewUserVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NewUserVC.swift; path = ../NewUserVC.swift; sourceTree = "<group>"; };
 		35868ED91CD4345500B62F53 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginVC.swift; path = ../LoginVC.swift; sourceTree = "<group>"; };
+		35F1102E1CD70BE400BCCE22 /* FavEventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavEventCell.swift; sourceTree = "<group>"; };
+		7A2E02C51CD693B70017F21B /* EventNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventNavigationController.swift; sourceTree = "<group>"; };
+		7A2E02C91CD696650017F21B /* NewEventTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewEventTableVC.swift; sourceTree = "<group>"; };
+		7A2E02CD1CD6DA390017F21B /* DatePickerTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerTextField.swift; sourceTree = "<group>"; };
 		7A49610F1CD3C9C700581570 /* CaseEvents-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CaseEvents-Bridging-Header.h"; sourceTree = "<group>"; };
 		7ADD39451CD3C1DB00700C40 /* CaseEvents.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CaseEvents.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ADD39481CD3C1DB00700C40 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7ADD394A1CD3C1DB00700C40 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		7ADD394C1CD3C1DB00700C40 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		7ADD394C1CD3C1DB00700C40 /* UserInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoVC.swift; sourceTree = "<group>"; };
 		7ADD394F1CD3C1DB00700C40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7ADD39511CD3C1DB00700C40 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7ADD39541CD3C1DB00700C40 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -114,13 +128,20 @@
 				7ADD39481CD3C1DB00700C40 /* AppDelegate.swift */,
 				35868ED71CD428D800B62F53 /* NewUserVC.swift */,
 				35868ED91CD4345500B62F53 /* LoginVC.swift */,
-				7ADD394A1CD3C1DB00700C40 /* FirstViewController.swift */,
-				7ADD394C1CD3C1DB00700C40 /* SecondViewController.swift */,
+				35404AC61CD5C20E00E84DC9 /* UserModel.swift */,
+				7ADD394C1CD3C1DB00700C40 /* UserInfoVC.swift */,
 				7ADD394E1CD3C1DB00700C40 /* Main.storyboard */,
+				35F1102E1CD70BE400BCCE22 /* FavEventCell.swift */,
+				35404AC41CD5872300E84DC9 /* EventCell.swift */,
+				7A2E02C91CD696650017F21B /* NewEventTableVC.swift */,
+				7A2E02C51CD693B70017F21B /* EventNavigationController.swift */,
+				35404AC01CD585E400E84DC9 /* EventTableViewController.swift */,
+				3567D8B21CD82C2000F13259 /* EventDetailVC.swift */,
 				7ADD39511CD3C1DB00700C40 /* Assets.xcassets */,
 				7ADD39531CD3C1DB00700C40 /* LaunchScreen.storyboard */,
 				7ADD39561CD3C1DB00700C40 /* Info.plist */,
 				7A49610F1CD3C9C700581570 /* CaseEvents-Bridging-Header.h */,
+				7A2E02CD1CD6DA390017F21B /* DatePickerTextField.swift */,
 			);
 			path = CaseEvents;
 			sourceTree = "<group>";
@@ -345,11 +366,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3567D8B31CD82C2000F13259 /* EventDetailVC.swift in Sources */,
 				35868ED81CD428D800B62F53 /* NewUserVC.swift in Sources */,
-				7ADD394D1CD3C1DB00700C40 /* SecondViewController.swift in Sources */,
+				7A2E02CA1CD696650017F21B /* NewEventTableVC.swift in Sources */,
+				7A2E02CE1CD6DA390017F21B /* DatePickerTextField.swift in Sources */,
+				35F1102F1CD70BE400BCCE22 /* FavEventCell.swift in Sources */,
+				7ADD394D1CD3C1DB00700C40 /* UserInfoVC.swift in Sources */,
+				35404AC71CD5C20E00E84DC9 /* UserModel.swift in Sources */,
 				7ADD39491CD3C1DB00700C40 /* AppDelegate.swift in Sources */,
-				7ADD394B1CD3C1DB00700C40 /* FirstViewController.swift in Sources */,
+				35404AC11CD585E400E84DC9 /* EventTableViewController.swift in Sources */,
 				35868EDA1CD4345500B62F53 /* LoginVC.swift in Sources */,
+				7A2E02C61CD693B70017F21B /* EventNavigationController.swift in Sources */,
+				35404AC51CD5872300E84DC9 /* EventCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
