@@ -36,6 +36,11 @@ class EventCell: UITableViewCell {
         ref.updateChildValues([
             cuid + "/faved": UserModel.faved + "/" + self.eventName.text!
         ])
+        let alert = UIAlertView(title: "Success!",
+                                message: "Added to your favorites",
+                                delegate: nil,
+                                cancelButtonTitle: "Ok")
+        alert.show()
     }
    
     

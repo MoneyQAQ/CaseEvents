@@ -9,6 +9,8 @@
 import UIKit
 
 class FavEventCell: UITableViewCell {
+    
+    var row: Int?
 
     @IBOutlet weak var eventName: UILabel!
     @IBOutlet weak var oName: UILabel!

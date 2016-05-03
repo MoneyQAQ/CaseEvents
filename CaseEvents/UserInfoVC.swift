@@ -46,7 +46,6 @@ class UserInfoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         self.events = EventTableViewController.events
         
         for item in events {
-//            print(item)
             let en = item["name"] as? String
             if faves.contains(en!) {
                 e2.append(item)
@@ -54,6 +53,19 @@ class UserInfoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         }
         favs.reloadData()
         
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        faves = UserModel.faved.characters.split{$0 == "/"}.map(String.init)
+        self.events = EventTableViewController.events
+        e2.removeAll()
+        for item in events {
+            let en = item["name"] as? String
+            if faves.contains(en!) {
+                e2.append(item)
+            }
+        }
+        favs.reloadData()
     }
     
     func getDataFromUrl(url:NSURL, completion: ((data: NSData?, response: NSURLResponse?, error: NSError? ) -> Void)) {
@@ -102,6 +114,7 @@ class UserInfoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             cell.month.text = date[0...2]
             cell.date.text = date[4...5]
         }
+        cell.row = indexPath.row
         return cell
     }
     
@@ -115,8 +128,23 @@ class UserInfoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     
-    func loadDataFromFirebase() {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let backItem = UIBarButtonItem()
+        backItem.title = "Back to favorites"
+        navigationItem.backBarButtonItem = backItem
+        if segue.identifier == "fdetail"
+        {
+            let destinationVC = segue.destinationViewController as! EventDetailVC
+            let senderCell = sender as! FavEventCell
+            destinationVC.row = senderCell.row
+            destinationVC.isFav = true
+            for e in EventTableViewController.events{
+                if e["name"] as? String == senderCell.eventName.text {
+                    destinationVC.iString = e[4] as? String
+                }
             }
+        }
+    }
     
     
     

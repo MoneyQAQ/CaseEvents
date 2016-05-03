@@ -19,6 +19,9 @@ class EventDetailVC: UIViewController {
     var socialController = SLComposeViewController()
     var iString: String?
     var tempImage: UIImage?
+    var isFav = false
+    var e2 = [NSDictionary]()
+    var faves = [String]()
     
     @IBOutlet weak var eventName: UILabel!
     @IBOutlet weak var oName: UILabel!
@@ -31,7 +34,28 @@ class EventDetailVC: UIViewController {
     
     
     override func viewDidLoad() {
-        let event = EventTableViewController.events[row!]
+        faves = UserModel.faved.characters.split{$0 == "/"}.map(String.init)
+        let events = EventTableViewController.events
+        for item in events {
+            //            print(item)
+            let en = item["name"] as? String
+            if faves.contains(en!) {
+                e2.append(item)
+            }
+        }
+
+        var event = NSDictionary()
+        if isFav {
+            event = self.e2[row!]
+            if let base64String = iString {
+                let decodedData = NSData(base64EncodedString: base64String, options: NSDataBase64DecodingOptions())
+                let decodedImage = UIImage(data: decodedData!)!
+                self.image.image = decodedImage
+            }
+        }
+        else {
+            event = EventTableViewController.events[row!]
+        }
         eventName.text = event["name"] as? String
         oName.text = event["organizer"] as? String
         let st = event["startTime"] as? String
@@ -147,6 +171,11 @@ class EventDetailVC: UIViewController {
         ref.updateChildValues([
             cuid + "/faved": UserModel.faved + "/" + self.eventName.text!
             ])
+        let alert = UIAlertView(title: "Success!",
+                                message: "Added to your favorites",
+                                delegate: nil,
+                                cancelButtonTitle: "Ok")
+        alert.show()
     }
     
     // Creates an event in the EKEventStore. The method assumes the eventStore is created and accessible
