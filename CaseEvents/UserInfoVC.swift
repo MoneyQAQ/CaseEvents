@@ -23,7 +23,7 @@ class UserInfoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         let email = userData["email"] as? String
-        let uid = UserModel.currentUser.uid
+        //let uid = UserModel.currentUser.uid
         test.text = email
         
         let userimageurl = userData["profileImageURL"] as? String
@@ -79,8 +79,29 @@ class UserInfoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let event = e2[indexPath.row]
         let dequeued: AnyObject = tableView.dequeueReusableCellWithIdentifier("myeventcell", forIndexPath: indexPath)
         let cell = dequeued as! FavEventCell
-        cell.eventName.text = event["name"] as? String
-        cell.location.text = event["location"] as? String
+        if let ename = event["name"] as? String {
+            cell.eventName.text = ename
+        }
+        if let l = event["location"] as? String {
+            if let date = event["startTime"] as? String, ed = event["endTime"] as? String{
+                if date[4...5] == ed[4...5] {
+                    cell.location.text = date[13...20] + " - " + ed[13...20] + " | " + l
+                }
+                else {
+                    cell.location.text = String (Int(ed[5])! - Int(date[5])!) + " days | " + l
+                }
+            }
+            else {
+                cell.location.text = l
+            }
+        }
+        if let oname = event["organizer"] as? String {
+            cell.oName.text = oname
+        }
+        if let date = event["startTime"] as? String {
+            cell.month.text = date[0...2]
+            cell.date.text = date[4...5]
+        }
         return cell
     }
     

@@ -27,6 +27,31 @@ class EventDetailVC: UIViewController {
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var cost: UILabel!
     
+    
+    override func viewDidLoad() {
+        let event = EventTableViewController.events[row!]
+        eventName.text = event["startTime"] as? String
+        oName.text = event["organizer"] as? String
+        let st = event["startTime"] as? String
+        let et = event["endTime"] as? String
+        let l = event["location"] as? String
+        if st![4...5] == et![4...5] {
+            let stt = st![13...20]
+            let ett = et![13...20]
+            location.text = stt + " - " + ett + " | " + l!
+        }
+        else {
+            let tt = Int(et![5])! - Int(st![5])!
+            location.text = String (tt) + " days | " + l!
+        }
+        if let date = event["startTime"] as? String {
+            month.text = date[0...2]
+            self.date.text = date[4...5]
+        }
+        des.text = event["description"] as? String
+        cost.text = event["cost"] as? String
+    }
+    
     @IBAction func shareOnFacebook(sender: AnyObject)
     {
         if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook) {
