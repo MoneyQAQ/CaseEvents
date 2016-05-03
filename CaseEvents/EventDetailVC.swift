@@ -17,6 +17,8 @@ class EventDetailVC: UIViewController {
     var favsString: String?
     var row: Int?
     var socialController = SLComposeViewController()
+    var iString: String?
+    var tempImage: UIImage?
     
     @IBOutlet weak var eventName: UILabel!
     @IBOutlet weak var oName: UILabel!
@@ -52,6 +54,7 @@ class EventDetailVC: UIViewController {
         }
         des.text = event["description"] as? String
         cost.text = event["cost"] as? String
+        image.image = self.tempImage
     }
     
     @IBAction func shareOnFacebook(sender: AnyObject)

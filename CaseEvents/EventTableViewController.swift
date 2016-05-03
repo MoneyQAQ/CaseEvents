@@ -110,6 +110,7 @@ class EventTableViewController: UITableViewController {
             let destinationVC = segue.destinationViewController as! EventDetailVC
             let senderCell = sender as! EventCell
             destinationVC.row = senderCell.row
+            destinationVC.tempImage = senderCell.im.image
         }
     }
 
