@@ -24,7 +24,7 @@ class EventDetailVC: UIViewController {
     @IBOutlet weak var date: UILabel!
     @IBOutlet weak var month: UILabel!
     @IBOutlet weak var des: UITextView!
-    
+    @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var cost: UILabel!
     
     @IBAction func shareOnFacebook(sender: AnyObject)
@@ -32,7 +32,7 @@ class EventDetailVC: UIViewController {
         if SLComposeViewController.isAvailableForServiceType(SLServiceTypeFacebook) {
             socialController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
             socialController.setInitialText("Check out this Event:\" " + eventName.text! + "\" on CaseEvents!")
-//            socialController.addImage(eventImage.image)
+            socialController.addImage(image.image)
             self.presentViewController(socialController, animated: true, completion: nil)
         } else {
             let alert: UIAlertView = UIAlertView(title: "Facebook", message: "Please login to your Facebook account in Settings", delegate: self, cancelButtonTitle: "OK")
@@ -56,7 +56,32 @@ class EventDetailVC: UIViewController {
         
     }
     
-    @IBAction func shareOnTwitter(sender: AnyObject) {
+    @IBAction func shareOnTwitter(sender: AnyObject)
+    {
+        if SLComposeViewController.isAvailableForServiceType(SLServiceTypeTwitter) {
+            socialController = SLComposeViewController(forServiceType: SLServiceTypeTwitter)
+            socialController.setInitialText("Check out this Event:\" " + eventName.text! + "\" on CaseEvents!")
+            socialController.addImage(image.image)
+            self.presentViewController(socialController, animated: true, completion: nil)
+        } else {
+            let alert: UIAlertView = UIAlertView(title: "Twitter", message: "Please login to your Twitter account in Settings", delegate: nil, cancelButtonTitle: "OK")
+            alert.show()
+        }
+        
+        socialController.completionHandler = { result -> Void in
+            var output = ""
+            switch result {
+            case SLComposeViewControllerResult.Cancelled: output = "Sharing cancelled"; break
+            case SLComposeViewControllerResult.Done: output = "Your image is on Twitter!"; break
+                // default: break
+            }
+            let alert = UIAlertView(title: "Twitter",
+                                    message: output,
+                                    delegate: nil,
+                                    cancelButtonTitle: "OK")
+            alert.show()
+        }
+
     }
 
     @IBAction func add2Calendar(sender: AnyObject)
