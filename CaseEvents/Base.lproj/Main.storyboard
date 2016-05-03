@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="edM-PU-cQS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="edM-PU-cQS">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -970,21 +970,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="78" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qio-KL-1Uf">
-                                <rect key="frame" x="20" y="214" width="560" height="337"/>
+                                <rect key="frame" x="0.0" y="214" width="600" height="337"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="600" id="7i3-hh-xqd"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="myeventcell" rowHeight="78" id="Kcy-qr-0bk" customClass="FavEventCell" customModule="CaseEvents" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="560" height="78"/>
+                                        <rect key="frame" x="0.0" y="28" width="600" height="78"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Kcy-qr-0bk" id="xlo-eN-hW6">
-                                            <rect key="frame" x="0.0" y="0.0" width="560" height="77.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="77.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Nqt-6c-BQd">
-                                                    <rect key="frame" x="8" y="8" width="544" height="58"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Nqt-6c-BQd">
+                                                    <rect key="frame" x="8" y="8" width="584" height="58"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="737-wx-C30" userLabel="Calendar">
                                                             <rect key="frame" x="0.0" y="0.0" width="58" height="58"/>
@@ -1026,11 +1026,11 @@
                                                                 <constraint firstItem="ZYy-oE-Ru8" firstAttribute="centerX" secondItem="737-wx-C30" secondAttribute="centerX" id="vdL-e5-AVT"/>
                                                             </constraints>
                                                         </view>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="tPN-4L-E3W" userLabel="Labels">
-                                                            <rect key="frame" x="70" y="0.0" width="474" height="58"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="tPN-4L-E3W" userLabel="Labels">
+                                                            <rect key="frame" x="70" y="0.0" width="514" height="58"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Spring Festival Gala" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fto-fw-VgQ" userLabel="Title">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="474" height="21"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="514" height="21"/>
                                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="17"/>
                                                                     <nil key="highlightedColor"/>
                                                                     <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
@@ -1038,7 +1038,7 @@
                                                                     </variation>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Unknown organizer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="4WB-Gb-AKP" userLabel="Organizer">
-                                                                    <rect key="frame" x="0.0" y="22" width="474" height="16"/>
+                                                                    <rect key="frame" x="0.0" y="22" width="514" height="16"/>
                                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="13"/>
                                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -1046,8 +1046,8 @@
                                                                         <rect key="frame" x="0.0" y="22" width="314" height="16"/>
                                                                     </variation>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6pm - 8pm  |  Thwing Ballroom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="82Z-E8-R7f" userLabel="DateLocation">
-                                                                    <rect key="frame" x="0.0" y="39" width="474" height="14"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="6pm - 8pm  |  Thwing Ballroom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="82Z-E8-R7f" userLabel="DateLocation">
+                                                                    <rect key="frame" x="0.0" y="39" width="514" height="14"/>
                                                                     <fontDescription key="fontDescription" name="AppleSDGothicNeo-Light" family="Apple SD Gothic Neo" pointSize="12"/>
                                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -1055,8 +1055,8 @@
                                                                         <rect key="frame" x="0.0" y="39" width="314" height="15"/>
                                                                     </variation>
                                                                 </label>
-                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dif-nM-3Xk">
-                                                                    <rect key="frame" x="0.0" y="54" width="474" height="4"/>
+                                                                <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dif-nM-3Xk">
+                                                                    <rect key="frame" x="0.0" y="54" width="514" height="4"/>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="4" id="EEy-ii-hX5"/>
@@ -1095,7 +1095,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="qio-KL-1Uf" secondAttribute="bottom" id="768-RU-ZRg"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="qio-KL-1Uf" secondAttribute="trailing" id="BXT-FS-DIS"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qio-KL-1Uf" secondAttribute="trailing" constant="-20" id="BXT-FS-DIS"/>
                             <constraint firstItem="HVN-JJ-n9I" firstAttribute="leading" secondItem="Bob-bE-Ael" secondAttribute="trailing" constant="30" id="C7H-xW-YfD"/>
                             <constraint firstItem="HVN-JJ-n9I" firstAttribute="top" secondItem="Bob-bE-Ael" secondAttribute="top" id="Chf-vQ-Pdg"/>
                             <constraint firstItem="HVN-JJ-n9I" firstAttribute="leading" secondItem="Bob-bE-Ael" secondAttribute="trailing" id="Fgp-hg-H1w"/>
@@ -1108,7 +1108,7 @@
                             <constraint firstItem="JT6-iQ-GLK" firstAttribute="leading" secondItem="zEq-FU-wV5" secondAttribute="leading" id="ePk-f9-HWv"/>
                             <constraint firstItem="zEq-FU-wV5" firstAttribute="leading" secondItem="WI3-v2-uyA" secondAttribute="trailing" constant="10" id="hku-wO-6qa"/>
                             <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="qio-KL-1Uf" secondAttribute="bottom" id="omd-hN-49B"/>
-                            <constraint firstItem="qio-KL-1Uf" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="pxi-Id-gzz"/>
+                            <constraint firstItem="qio-KL-1Uf" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="-20" id="pxi-Id-gzz"/>
                             <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
                             <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
                             <constraint firstItem="JT6-iQ-GLK" firstAttribute="top" secondItem="HVN-JJ-n9I" secondAttribute="top" id="rM3-kN-QC6"/>

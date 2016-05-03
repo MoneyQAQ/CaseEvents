@@ -13,10 +13,12 @@ class UserInfoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var eventCount:UInt = 0
     var eref = Firebase(url: "https://flickering-heat-8881.firebaseio.com/Events")
     var events = [NSDictionary]()
+    var e2 = [NSDictionary]()
     
     let ref = Firebase(url: "https://flickering-heat-8881.firebaseio.com/Users")
     
     var userData = UserModel.currentUser.providerData
+    var faves = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,26 +32,35 @@ class UserInfoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             downloadImage(checkedUrl)
         }
         
-        
+        /*
         ref.observeEventType(.Value, withBlock: { snapshot in
             for item in snapshot.children {
                 let child = item as! FDataSnapshot
                 if child.value.valueForKey("uid") as? String == uid {
                     let favsString = child.value.valueForKey("faved") as? String
-                    let favs = favsString!.characters.split{$0 == "/"}.map(String.init)
-                    for item in favs {
-                        print(item)
-                    }
+                    self.faves = favsString!.characters.split{$0 == "/"}.map(String.init)
                 }
             }
-        })
+        })*/
+        
+        faves = UserModel.faved.characters.split{$0 == "/"}.map(String.init)
         
         favs.delegate = self
         favs.dataSource = self
+        /*
         eref.observeEventType(.Value, withBlock: { snapshot in
             self.eventCount = snapshot.childrenCount
         })
+ */
         loadDataFromFirebase()
+        for item in self.events {
+            let en = item["name"] as? String
+            if faves.contains(en!) {
+                e2.append(item)
+            }
+        }
+        favs.reloadData()
+        
     }
     
     func getDataFromUrl(url:NSURL, completion: ((data: NSData?, response: NSURLResponse?, error: NSError? ) -> Void)) {
@@ -72,7 +83,7 @@ class UserInfoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let event = events[indexPath.row]
+        let event = e2[indexPath.row]
         let dequeued: AnyObject = tableView.dequeueReusableCellWithIdentifier("myeventcell", forIndexPath: indexPath)
         let cell = dequeued as! FavEventCell
         cell.eventName.text = event["name"] as? String
@@ -86,7 +97,7 @@ class UserInfoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return events.count
+        return e2.count
     }
     
     
@@ -99,7 +110,7 @@ class UserInfoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 tempItems.append(name)
             }
             self.events = tempItems
-            self.favs.reloadData()
+            //self.favs.reloadData()
         })
     }
     
