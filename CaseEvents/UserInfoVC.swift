@@ -46,7 +46,7 @@ class UserInfoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         self.events = EventTableViewController.events
         
         for item in events {
-            print(item)
+//            print(item)
             let en = item["name"] as? String
             if faves.contains(en!) {
                 e2.append(item)

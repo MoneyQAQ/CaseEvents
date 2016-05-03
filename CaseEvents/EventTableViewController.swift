@@ -48,7 +48,7 @@ class EventTableViewController: UITableViewController {
             cell.date.text = date[4...5]
         }
         if let c = event["cost"] as? String {
-            cell.cost.text = "Public " + c
+            cell.cost.text = c
         }
         cell.row = indexPath.row
         return cell
@@ -63,7 +63,7 @@ class EventTableViewController: UITableViewController {
         })
         loadDataFromFirebase()
         uref.observeEventType(.Value, withBlock: { snapshot in
-            print(snapshot.value)
+//            print(snapshot.value)
             for item in snapshot.children {
                 let child = item as! FDataSnapshot
                 if child.value.valueForKey("uid") as? String == cuid {

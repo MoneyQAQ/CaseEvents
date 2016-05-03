@@ -83,7 +83,7 @@ class NewEventTableVC: UITableViewController, UIImagePickerControllerDelegate, U
         imagePath = docsDir.stringByAppendingPathComponent("image.png")
         UIImageJPEGRepresentation(image, 0.8)!.writeToFile(imagePath, atomically: true)
         imageURL = NSURL(fileURLWithPath: imagePath)
-        print("\(imageURL)")
+//        print("\(imageURL)")
         
         dismissViewControllerAnimated(true, completion: nil)
     }
