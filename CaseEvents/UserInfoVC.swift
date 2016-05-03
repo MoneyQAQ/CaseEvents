@@ -80,8 +80,6 @@ class UserInfoVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         getDataFromUrl(url) { (data, response, error)  in
             dispatch_async(dispatch_get_main_queue()) { () -> Void in
                 guard let data = data where error == nil else { return }
-                print(response?.suggestedFilename ?? "")
-                print("Download Finished")
                 self.profileimage.image = UIImage(data: data)
             }
         }
